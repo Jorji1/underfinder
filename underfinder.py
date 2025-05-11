@@ -40,7 +40,7 @@ SQLI_PAYLOADS = {
 }
 
 
-MAX_URLS_TO_SCAN = 20
+MAX_URLS_TO_SCAN = 20000
 
 def log_message(results_widget, message):
  
@@ -388,7 +388,7 @@ def execute_scan_and_reenable_button(url, results_widget, scan_button):
 
 def setup_gui():
     window = tk.Tk()
-    window.title(f"Scanner Web c/ Spider (v{USER_AGENT.split('/')[-1]})")
+    window.title(f"UnderFinder V1(v{USER_AGENT.split('/')[-1]})")
     window.geometry("800x700") 
     style = ttk.Style()
     try:
@@ -412,11 +412,11 @@ def setup_gui():
     scan_button.pack(side=tk.LEFT, padx=(5, 0), ipady=2)
 
     results_widget.config(state=tk.NORMAL)
-    log_message(results_widget, f"Bem-vindo ao Scanner Web com Spider (v{USER_AGENT.split('/')[-1]})!\n\n")
-    log_message(results_widget, f"Limite de URLs para o spider: {MAX_URLS_TO_SCAN}\n")
-    log_message(results_widget, "AVISO: Use esta ferramenta com responsabilidade e APENAS em sistemas\n")
-    log_message(results_widget, "para os quais tem PERMISSÃO EXPLÍCITA para testar.\n")
-    log_message(results_widget, "É necessário ter 'beautifulsoup4' e 'lxml' instalados: pip install beautifulsoup4 lxml\n\n")
+    log_message(results_widget, f" Welcome Tester (v{USER_AGENT.split('/')[-1]})!\n\n")
+    log_message(results_widget, f"URls Tool limit: {MAX_URLS_TO_SCAN}\n")
+    log_message(results_widget, "Disclaimer: Use This tool only where you have permission\n")
+    log_message(results_widget, "to be on usage.\n")
+    log_message(results_widget, "you need 'beautifulsoup4' e 'lxml' instaled: pip install beautifulsoup4 lxml\n\n")
     results_widget.config(state=tk.DISABLED)
 
     window.mainloop()
